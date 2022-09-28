@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Optional;
 
+import com.javatpoint.error.BooksNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -37,7 +38,7 @@ public class BookServiceTest {
 	}
 	
 	@Test
-	public void getBooksByIdTest() {
+	public void getBooksByIdTest() throws BooksNotFoundException {
 		
 		Books found = booksService.getBooksById(100);	
 		assertEquals("abcd", found.getAuthor());

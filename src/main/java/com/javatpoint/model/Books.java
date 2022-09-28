@@ -27,7 +27,7 @@ import lombok.Setter;
 public class Books {
 //Defining book id as primary key  
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="bookid")
 	private int bookid;
 	@Column(name="bookname")
